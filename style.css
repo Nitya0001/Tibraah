@@ -44,14 +44,13 @@ p {
 
 
 
-/* === Universal box-sizing to avoid overflow === */
+/* === Universal box-sizing === */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* === Navbar === */
 .navbar {
   position: fixed;
   top: 0;
@@ -68,13 +67,6 @@ p {
   justify-content: space-between;
   overflow-x: hidden;
   z-index: 10;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  flex-shrink: 0;
 }
 
 .logo img {
@@ -103,7 +95,6 @@ p {
   color: #d7b153;
 }
 
-/* === Hamburger toggle === */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -118,16 +109,9 @@ p {
   background: #333;
   margin: 4px 0;
   width: 100%;
-  transition: 0.3s;
 }
 
-/* === Mobile styles === */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-  }
-
   .menu-toggle {
     display: flex;
   }
@@ -141,13 +125,14 @@ p {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 2rem;
-    display: none; /* Hidden by default */
+    display: none; /* THIS hides it by default on mobile */
   }
 
   .nav-links.show {
-    display: flex; /* Show when toggled */
+    display: flex; /* THIS shows it when toggled */
   }
 }
+
 
 
 
@@ -440,3 +425,4 @@ footer {
   opacity: 1;
   transform: translateY(0); /* slide to normal position */
 }
+
