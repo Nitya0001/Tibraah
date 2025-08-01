@@ -4,23 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tibraah – Traditions Delivered</title>
-  <style>
-header {
-  background: url("9.png") no-repeat center/cover;
-  background-position-y: 15px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
-
-  /* ✅ Smooth scale */
-  transform-origin: center top;   /* scale from top center */
-  transition: transform 0.3s ease;
-}
-  </style>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet" />
 </head>
@@ -29,10 +12,17 @@ header {
   <!-- ✅ Sticky Navbar goes here -->
 <nav class="navbar">
   <div class="logo">
-  <img src="logo.png" alt="Tibraah Logo">
-</div>
+    <img src="logo.PNG" alt="Tibraah Logo">
+  </div>
 
-  <ul class="nav-links">
+  <!-- ✅ Add this toggle button -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="#head">Home</a></li>
     <li><a href="#text">Tibraah</a></li>
     <li><a href="#story">Story</a></li>
@@ -42,6 +32,7 @@ header {
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+
 
 <!-- ✅ Hero Banner -->
 <header id="head">
@@ -277,6 +268,14 @@ header {
   });
 
   galleryObserver.observe(document.querySelector('#gallery .gallery'));
+</script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 </script>
 
 
