@@ -459,3 +459,18 @@ footer {
   opacity: 1;
   transform: translateY(0); /* slide to normal position */
 }
+
+#fullscreen-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#fullscreen-btn:hover {
+  background: #555;
+}
