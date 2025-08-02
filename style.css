@@ -410,3 +410,49 @@ footer {
   transform: translateY(0); /* slide to normal position */
 }
 
+/* By default, hide it */
+.mobile-overlay {
+  display: none;
+}
+
+/* Show only on screens below 1024px (tablet & phone) */
+@media screen and (max-width: 1024px) {
+  .mobile-overlay {
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff6e0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .mobile-message {
+    max-width: 500px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .mobile-message h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-message p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  /* Hide the actual page behind it */
+  body > *:not(.mobile-overlay) {
+    display: none;
+  }
+}
